@@ -19,7 +19,7 @@ const News = ({ navigation }) => {
 
   useEffect(() => {
     fetch(
-      "https://newsdata.io/api/1/news?apikey=pub_290922174d60307bc3a9267cd5bd0d71b71&category=health&country=in"
+      `https://newsdata.io/api/1/news?apikey=${API_KEY}&category=health&country=in`
     )
       .then((res) => res.json())
       .then((data) => setNewsDataIO(data))
@@ -28,7 +28,7 @@ const News = ({ navigation }) => {
 
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=c630aeaafd994be98b3c9377bed4fe13"
+      `https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=${API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => setNewsAPi(data))
